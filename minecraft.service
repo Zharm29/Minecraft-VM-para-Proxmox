@@ -1,0 +1,13 @@
+[Unit]
+Description=Minecraft Server
+After=network.target
+
+[Service]
+User=minecraft
+WorkingDirectory=/opt/minecraft
+ExecStart=/opt/minecraft/start.sh
+Restart=on-failure
+SuccessExitStatus=0 1
+
+[Install]
+WantedBy=multi-user.target
